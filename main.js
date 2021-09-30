@@ -1,4 +1,5 @@
-﻿const modalWrapper = document.querySelector(".modals-wrapper");
+﻿
+const modalWrapper = document.querySelector(".modals-wrapper");
 
 function displayModal(id) {
     const modal = document.getElementById(id);
@@ -11,3 +12,12 @@ function displayModal(id) {
     modal.style.display = "none";
     })
 }
+
+const copies = document.querySelectorAll(".copy");
+copies.forEach(copy => {
+copy.onclick = () => {
+let elementToCopy = copy.previousElementSibling;
+elementToCopy.select();
+document.execCommand("copy");
+}
+})
