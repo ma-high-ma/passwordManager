@@ -123,6 +123,8 @@ text-align : center;
 margin-top : 20px;
 padding : 0 20px;
 display : grid;
+grid-template-columns : 1fr 1fr 1fr 1fr;
+grid-gap : 10px;
 margin-bottom : 80px;
 }
 
@@ -151,6 +153,16 @@ align-items : center;
 
 .actions:hover .action-item{
 display : flex;
+}
+
+@media screen and (max-width : 680px) {
+.container {
+grid-template-columns : 1fr;
+
+}
+.brand {
+margin-bottom : 30px;
+}
 }
 
 .copy {
